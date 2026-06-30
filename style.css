@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.task-form button {
+  padding: 12px 18px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background: #1d4ed8;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-text {
+  color: #222;
+}
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.task-actions button {
+  border: none;
+  padding: 7px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: rgb(224, 220, 220);
+}
+
+.edit-btn {
+  background: #f59e0b;
+}
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.empty-message {
+  text-align: center;
+  color: #777;
+  display: none;
+  margin-top: 20px;
+}
+
+@media (max-width: 500px) {
+  .task-form {
+    flex-direction: column;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
